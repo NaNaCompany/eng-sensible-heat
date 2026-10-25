@@ -1,0 +1,59 @@
+{
+  "id": "E075",
+  "slug": "eng-sensible-heat",
+  "title": "현열 필요열량 계산기",
+  "title_en": "Sensible Heat Calculator",
+  "category": "열",
+  "category_en": "Thermodynamics",
+  "fields": [
+    {
+      "key": "m",
+      "label": "질량 m",
+      "label_en": "Mass m",
+      "dimension": "mass",
+      "example": 2,
+      "constraint": "positive",
+      "display_unit": "kg",
+      "display_value": "2"
+    },
+    {
+      "key": "cp",
+      "label": "일정 정압 비열 c_p",
+      "label_en": "Constant pressure specific heat c_p",
+      "dimension": "specificHeat",
+      "example": 500,
+      "constraint": "positive",
+      "display_unit": "JkgK",
+      "display_value": "500"
+    },
+    {
+      "key": "dt",
+      "label": "온도 변화 ΔT",
+      "label_en": "Temperature change ΔT",
+      "dimension": "deltaT",
+      "example": 20,
+      "constraint": "signed",
+      "display_unit": "Kdiff",
+      "display_value": "20"
+    }
+  ],
+  "result_label": "현열 변화 Q",
+  "result_label_en": "Sensible heat change Q",
+  "result_dimension": "energy",
+  "formula": "Q = mc_pΔT",
+  "purpose": "상변화 없는 가열·냉각의 현열 변화량 계산",
+  "purpose_en": "Calculate sensible heat for heating or cooling without a phase change.",
+  "assumptions": "m,c_p>0. c_p가 거의 일정한 온도 범위에서 정압 가열·냉각 또는 통상적인 고체·액체 근사에 쓴다. 냉각은 음수다. 잠열·열손실·가열 시간·히터 효율은 제외한다.",
+  "assumptions_en": "Required: m,c_p>0 and approximately constant c_p over the temperature interval. Use constant-pressure heating or cooling, or the usual solid/liquid approximation. Cooling is negative. Latent heat, heat losses, heating time and heater efficiency are excluded.",
+  "sources": [
+    {
+      "label": "OpenStax · 1 4 heat transfer specific heat and calorimetry",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/1-4-heat-transfer-specific-heat-and-calorimetry"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-sensible-heat/",
+  "repository": "https://github.com/NaNaCompany/eng-sensible-heat",
+  "output_unit": "J"
+}
